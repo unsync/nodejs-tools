@@ -1,0 +1,42 @@
+{
+  "name": "@unsync/nodejs-tools",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "Shared tools for my projects",
+  "license": "MIT",
+  "repository": "unsync/nodejs-tools",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "prepare": "husky install",
+    "run": "ts-node-esm src/energy.ts",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "winston": "^3.11.0",
+    "lodash": "^4.17.21",
+    "logform": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@unsync/eslint": "^1.0.8",
+    "@types/lodash": "^4.14.202",
+    "@unsync/tsconfig": "1.0.5",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": "eslint --fix"
+  }
+}
