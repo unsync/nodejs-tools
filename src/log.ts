@@ -1,10 +1,10 @@
 import lodash from 'lodash'
-import winston from 'winston'
 import { format } from 'logform'
+import winston from 'winston'
 
 const { combine, timestamp, printf, errors } = format
 
-export function getLogger(_: {service: string}) {
+export function getLogger(_: { service: string }) {
   const myFormat = printf((info) => {
     const { level, message, timestamp, stack, ...meta } = info
     const data = lodash.omit(meta, ['service'])

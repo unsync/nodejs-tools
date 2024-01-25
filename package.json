@@ -1,7 +1,7 @@
 {
   "name": "@unsync/nodejs-tools",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared tools for my projects",
   "license": "MIT",
   "repository": "unsync/nodejs-tools",
@@ -14,29 +14,30 @@
   },
   "scripts": {
     "build": "tsc",
+    "checkdeps": "ncu",
+    "checkdeps:apply": "ncu -u",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix",
-    "prepare": "husky install",
-    "run": "ts-node-esm src/energy.ts",
-    "test": "exit 0"
+    "lint:fix": "eslint . --fix",
+    "test": "exit 0",
+    "prepare": "husky"
   },
   "dependencies": {
-    "winston": "^3.11.0",
     "lodash": "^4.17.21",
-    "logform": "^2.6.0"
+    "logform": "^2.6.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.5",
-    "@unsync/eslint": "^1.0.8",
     "@types/lodash": "^4.14.202",
-    "@unsync/tsconfig": "1.0.5",
-    "eslint": "^8.56.0",
-    "husky": "^8.0.3",
+    "@types/node": "^20.11.6",
+    "@unsync/eslint": "^1.0.10",
+    "@unsync/tsconfig": "1.0.6",
+    "husky": "^9.0.2",
     "lint-staged": "^15.2.0",
+    "npm-check-updates": "^16.14.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "lint-staged": {
-    "*.{js,ts,vue,json}": "eslint --fix"
+    "*.{js,ts,vue,json}": "eslint --fix ."
   }
 }
