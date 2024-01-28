@@ -1,7 +1,7 @@
 {
   "name": "@unsync/nodejs-tools",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared tools for my projects",
   "license": "MIT",
   "repository": "unsync/nodejs-tools",
