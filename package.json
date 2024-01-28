@@ -14,7 +14,6 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "tsc",
     "checkdeps": "ncu",
     "checkdeps:apply": "ncu -u",
     "lint": "eslint .",
@@ -24,7 +23,8 @@
     "release:patch": "npm version -m 'release:patch' patch",
     "release:minor": "npm version -m 'release:minor' minor",
     "release:major": "npm version -m 'release:major' major",
-    "postinstall": "node scripts/postinstall.cjs"
+    "postinstall": "node scripts/postinstall.cjs",
+    "build": "tsc"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -35,8 +35,8 @@
   "devDependencies": {
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.11.9",
-    "@unsync/eslint": "^1.0.21",
-    "@unsync/tsconfig": "1.0.9",
+    "@unsync/eslint": "^1.0.22",
+    "@unsync/tsconfig": "1.0.10",
     "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "ts-node": "^10.9.2",
