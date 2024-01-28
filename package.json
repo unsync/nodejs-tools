@@ -7,6 +7,7 @@
   "repository": "unsync/nodejs-tools",
   "main": "dist/index.js",
   "files": [
+    "scripts/postinstall.cjs",
     "dist"
   ],
   "engines": {
@@ -19,21 +20,22 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "exit 0",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "node scripts/postinstall.cjs"
   },
   "dependencies": {
     "lodash": "^4.17.21",
     "logform": "^2.6.0",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "npm-check-updates": "^16.14.14"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
-    "@types/node": "^20.11.6",
-    "@unsync/eslint": "^1.0.10",
-    "@unsync/tsconfig": "1.0.6",
-    "husky": "^9.0.2",
+    "@types/node": "^20.11.9",
+    "@unsync/eslint": "^1.0.21",
+    "@unsync/tsconfig": "1.0.9",
+    "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
-    "npm-check-updates": "^16.14.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
